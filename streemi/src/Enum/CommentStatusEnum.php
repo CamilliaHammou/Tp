@@ -1,9 +1,8 @@
 <?php
-// src/Enum/CommentStatusEnum.php
+// src/Enum/CommentsStatusEnum.php
 namespace App\Enum;
 
-enum CommentStatusEnum: string
-{
+enum CommentStatusEnum: string {
     case PENDING = 'pending';
     case APPROVED = 'approved';
     case REJECTED = 'rejected';
