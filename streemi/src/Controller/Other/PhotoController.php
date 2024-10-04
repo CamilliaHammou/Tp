@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Others;
+namespace App\Controller\Other;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +13,6 @@ class PhotoController extends AbstractController
     #[Route(path: '/upload')]
     public function upload(): Response
     {
-        return $this->render('others/upload.html.twig');
+        return $this->render('other/upload.html.twig');
     }
 }

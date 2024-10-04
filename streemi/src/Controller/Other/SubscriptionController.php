@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Others;
+namespace App\Controller\Other;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class ListController extends AbstractController
+class SubscriptionController extends AbstractController
 {
-    #[Route(path: '/lists', name: 'my_lists')]
+    #[Route(path: '/subscriptions', name: 'subscriptions')]
     public function show(): Response
     {
-        return $this->render('others/lists.html.twig');
+        return $this->render('other/abonnements.html.twig');
     }
 }
