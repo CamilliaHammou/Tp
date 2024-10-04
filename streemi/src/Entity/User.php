@@ -27,6 +27,9 @@ class User
     #[ORM\Column(enumType: UserAccountStatusEnum::class)]
     private ?UserAccountStatusEnum $accountStatus = null;
 
+    #[ORM\ManyToOne(inversedBy: 'author')]
+    private ?Comment $comment = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -76,6 +79,18 @@ class User
     public function setAccountStatus(UserAccountStatusEnum $accountStatus): static
     {
         $this->accountStatus = $accountStatus;
+
+        return $this;
+    }
+
+    public function getComment(): ?Comment
+    {
+        return $this->comment;
+    }
+
+    public function setComment(?Comment $comment): static
+    {
+        $this->comment = $comment;
 
         return $this;
     }
